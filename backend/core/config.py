@@ -1,4 +1,3 @@
-# filepath: /Users/marcos/Desktop/todo_list_python_fast_api/backend/core/config.py
 import os
 from functools import lru_cache
 from pydantic_settings import BaseSettings, SettingsConfigDict
@@ -18,7 +17,7 @@ class Settings(BaseSettings):
   ENVIRONMENT: Literal['dev', 'pro']
 
   # Database settings
-  DATABASE_TYPE: str = os.getenv("DATABASE_TYPE", "postgresql")  # Added this line
+  DATABASE_TYPE: str = os.getenv("DATABASE_TYPE", "postgresql")
   DATABASE_HOST: str = os.getenv("DATABASE_HOST", "localhost")
   DATABASE_PORT: int = os.getenv("DATABASE_PORT", 5432)
   DATABASE_USER: str = os.getenv("DATABASE_USER")
